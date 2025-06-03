@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #1a202c; /* A dark background, similar to your theme */
+            color: #e2e8f0; /* Light text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            padding: 30px;
+            background-color: rgba(45, 55, 72, 0.8); /* Semi-transparent dark card */
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        h1 {
+            font-size: 3rem;
+            color: #63b3ed; /* Light blue */
+            margin-bottom: 0.5rem;
+        }
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: #a0aec0; /* Lighter gray */
+        }
+        a {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-image: linear-gradient(to right, #4299e1, #6b46c1); /* Blue to purple gradient */
+            color: white;
+            text-decoration: none;
+            border-radius: 9999px; /* pill shape */
+            font-weight: bold;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <p>Oops! The page you're looking for doesn't exist.</p>
+        <p>It might have been moved or deleted.</p>
+        <a href="/">Go Back Home</a>
+    </div>
+</body>
+</html>
