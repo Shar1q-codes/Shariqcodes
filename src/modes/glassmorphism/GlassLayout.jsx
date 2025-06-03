@@ -11,8 +11,8 @@ export default function GlassLayout({ children }) {
       transition={{ duration: 0.5, type: 'spring' }}
       style={{
         background: 'rgba(255, 255, 255, 0.05)', // More transparent background
-        backdropFilter: 'blur(16px) saturate(180%)', // Reduced blur
-        WebkitBackdropFilter: 'blur(16px) saturate(180%)', // For Safari
+        backdropFilter: 'blur(7px) saturate(180%)', // More realistic, subtle blur
+        WebkitBackdropFilter: 'blur(7px) saturate(180%)', // For Safari
         border: '1px solid rgba(255, 255, 255, 0.1)', // Thinner, more subtle border
         boxShadow: '0 5px 25px rgba(0, 0, 0, 0.15)', // Softer shadow, removed inset
         boxSizing: 'border-box',

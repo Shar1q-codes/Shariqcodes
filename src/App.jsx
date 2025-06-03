@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { ModeProvider, useMode } from "./context/ModeContext";
+import IntroScreen from "./components/IntroScreen";
 import WallBackground from "./components/layout/WallBackground";
 import GlassLayout from "./modes/glassmorphism/GlassLayout";
 import ParallaxLayout from "../src/modes/parallax/ParallaxLayout";
 import FlatMinimalLayout from "../src/modes/flatminimal/FlatMinimalLayout";
 import ModeSwitcher from "./components/layout/ModeSwitcher";
 import Home from "./sections/Home";
+import Focus from "./sections/Focus";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Services from "./sections/Services";
@@ -21,6 +23,7 @@ function ThemedRoot() {
           <ModeSwitcher />
           <div className="space-y-16 pt-8 pb-8">
             <Home />
+            <Focus />
             <Projects />
             <Services />
             <Contact />
@@ -41,6 +44,7 @@ function ThemedRoot() {
           </div>
           <div className="space-y-16 pt-4 pb-8">
             <Home />
+            <Focus />
             <Projects />
             <Services />
             <Contact />
@@ -64,6 +68,7 @@ function ThemedRoot() {
           <div className="pointer-events-auto">
             <div className="space-y-16 pt-8 pb-8">
               <Home />
+              <Focus />
               <Projects />
               <Services />
               <Contact />
@@ -77,9 +82,12 @@ function ThemedRoot() {
 
 
 export default function App() {
+  const [showIntro, setShowIntro] = useState(true);
+
   return (
     <ModeProvider>
-      <ThemedRoot />
+      {showIntro && <IntroScreen onFinish={() => setShowIntro(false)} />}
+      {!showIntro && <ThemedRoot />}
     </ModeProvider>
   );
 }
